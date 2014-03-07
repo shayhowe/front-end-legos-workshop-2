@@ -399,7 +399,7 @@ $(document).ready(function() {
 
 * Assign it to a constructor function that takes a parameter of `data`
 * Set some instance variables in that function: `data`, `songs`, `currentSong`
-  * Initalize `songs` with an empty arrays
+  * Initalize `songs` with an empty array
   * Initalize `currentSong` with an empty object
   * Assign `data` to the value `data` parameter passed in to the constructor
 
@@ -474,14 +474,14 @@ mySong = new Song(data)
 
 * Create an `render` method on the prototype of the `Song` object
 * Use jQuery to render the song title, artist and artwork to the browser using the data attributes as your selectors
-* Try rendering you song object from the previous section: `mySong.render()`
+* Try rendering your song object from the previous section: `mySong.render()`
 
 ## Rendering the Playlist
 
 ### Step 1
 
-* In the `initialize` method `Playlist` object use a `forEach` loop to create new `Song` objects from each song entry in the `data` object
-* Push those objects into the `songs` array in the `Playlist` object
+* In the `initialize` method on the `Playlist` object use a `forEach` loop to create new `Song` objects from each song entry in the `data` object
+* Push those objects into the `songs` array on the `Playlist` object
 * Take a look at `App.Playlist.songs` in the console, you should see a bunch of `Song` objects
 * See if you can render one of them. *(Hint: `App.Playlist.songs[2].render()`)*
 
@@ -520,7 +520,7 @@ App.Templates.playlistSong(data)
 ### Step 5
 
 * At the beginning of the render method, assign the first song in the `songs` array to `currentSong` so that we can render that song to the player
-* Since the first song is now our `currentSong`, let move that element to the bottom of the array using the following code:
+* Since the first song is now our `currentSong`, lets move that element to the bottom of the array using the following code:
 
 ```
 this.songs = this.songs.concat(this.songs.splice(0, 1));
